@@ -3,7 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Janice Willa G. Badua — Portfolio</title>
+<title>Janice Willa G. Badua — Web Designer &amp; Developer</title>
+
+<!-- Primary SEO -->
+<meta name="description" content="Janice Willa G. Badua — freelance web designer & developer in the Philippines. I build clean, conversion-focused websites that help businesses build credibility and attract the right clients.">
+<meta name="author" content="Janice Willa G. Badua">
+<meta name="keywords" content="web designer, web developer, freelance, UI/UX, landing pages, Philippines, responsive design">
+<meta name="theme-color" content="#5C6F7C">
+<!-- TODO: replace with your live URL once deployed -->
+<link rel="canonical" href="https://janicewillabadua.xyz/">
+
+<!-- Open Graph (Facebook, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Janice Willa G. Badua — Web Designer &amp; Developer">
+<meta property="og:description" content="Clean, strategic, conversion-focused websites built from scratch. Freelance web designer & developer based in the Philippines.">
+<meta property="og:url" content="https://janicewillabadua.xyz/">
+<!-- TODO: host a 1200x630 preview image and point og:image to its full URL for rich link previews -->
+<meta property="og:image" content="https://janicewillabadua.xyz/og-image.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Janice Willa G. Badua — Web Designer &amp; Developer">
+<meta name="twitter:description" content="Clean, strategic, conversion-focused websites built from scratch. Freelance web designer & developer based in the Philippines.">
+<meta name="twitter:image" content="https://janicewillabadua.xyz/og-image.jpg">
+
+<!-- Favicon (inline SVG monogram — no external file needed) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%235C6F7C'/%3E%3Ctext x='50%25' y='52%25' font-family='Georgia,serif' font-size='30' font-weight='600' fill='%23EFEFEA' text-anchor='middle' dominant-baseline='middle'%3EJ%3C/text%3E%3C/svg%3E">
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -26,6 +52,11 @@ body.hovering #cur{transform:translate(-50%,-50%) scale(1.6)}
 body.hovering #cur .cur-dot{transform:translate(-50%,-50%) scale(0)}
 body.clicking #cur{transform:translate(-50%,-50%) scale(0.7)}
 a,button,.portfolio-card,.about-value,.skill-category,.filter-btn{cursor:none}
+/* fallback: restore native cursor on touch / coarse-pointer devices (and where the custom cursor would be useless) */
+@media (hover:none),(pointer:coarse){
+  body,a,button,.portfolio-card,.about-value,.skill-category,.filter-btn{cursor:auto}
+  #cur{display:none}
+}
 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;background:rgba(239,239,234,0.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:all 0.4s ease}
@@ -1981,13 +2012,20 @@ footer{padding:3rem 5%;border-top:1px solid var(--border);background:var(--bg3);
         <div class="contact-social"><div class="contact-social-title">Connect Online</div><div class="social-links"><a href="https://www.linkedin.com/in/janicewilla-badua-79a719200" class="social-link" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a><a href="mailto:Janicewilla.badua@gmail.com" class="social-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>Email</a></div></div>
       </div>
       <div class="fade-up fade-up-d3">
-        <div class="contact-form">
-          <div class="form-row"><div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Jane"></div><div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Smith"></div></div>
-          <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="jane@company.com"></div>
-          <div class="form-group"><label class="form-label">Project Type</label><select class="form-input"><option value="" disabled selected>Select a service...</option><option>Business Website</option><option>Landing Page Design</option><option>EdTech / Learning Platform</option><option>Hospitality Website</option><option>UI/UX Design</option><option>Website Redesign</option><option>Other</option></select></div>
-          <div class="form-group"><label class="form-label">Tell Me About Your Project</label><textarea class="form-input" placeholder="Share your vision, goals, and timeline..."></textarea></div>
-          <button class="btn-primary" style="align-self:flex-start" onclick="this.textContent='Message Sent ✓';this.style.background='#4A7A6D';this.style.borderColor='#4A7A6D'">Send Message</button>
-        </div>
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="f7ade20a-2223-43bb-a04c-8f68b38652b3">
+          <input type="hidden" name="subject" value="New project inquiry from your portfolio">
+          <input type="hidden" name="from_name" value="Janice Willa Portfolio">
+          <!-- honeypot anti-spam field (hidden from real users) -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important">
+
+          <div class="form-row"><div class="form-group"><label class="form-label" for="cf-first">First Name</label><input id="cf-first" name="first_name" type="text" class="form-input" placeholder="Jane" required></div><div class="form-group"><label class="form-label" for="cf-last">Last Name</label><input id="cf-last" name="last_name" type="text" class="form-input" placeholder="Smith" required></div></div>
+          <div class="form-group"><label class="form-label" for="cf-email">Email Address</label><input id="cf-email" name="email" type="email" class="form-input" placeholder="jane@company.com" required></div>
+          <div class="form-group"><label class="form-label" for="cf-type">Project Type</label><select id="cf-type" name="project_type" class="form-input" required><option value="" disabled selected>Select a service...</option><option>Business Website</option><option>Landing Page Design</option><option>EdTech / Learning Platform</option><option>Hospitality Website</option><option>UI/UX Design</option><option>Website Redesign</option><option>Other</option></select></div>
+          <div class="form-group"><label class="form-label" for="cf-msg">Tell Me About Your Project</label><textarea id="cf-msg" name="message" class="form-input" placeholder="Share your vision, goals, and timeline..." required></textarea></div>
+          <button type="submit" class="btn-primary" style="align-self:flex-start">Send Message</button>
+          <p id="cf-status" role="status" aria-live="polite" style="margin-top:1rem;font-size:0.9rem;display:none"></p>
+        </form>
       </div>
     </div>
   </div>
@@ -1995,7 +2033,7 @@ footer{padding:3rem 5%;border-top:1px solid var(--border);background:var(--bg3);
 
 <footer>
   <div class="footer-logo">Janice Willa</div>
-  <div class="footer-copy">© 2025 Janice Willa G. Badua</div>
+  <div class="footer-copy">© <span id="footer-year">2026</span> Janice Willa G. Badua</div>
   <div class="footer-right">Mandaluyong, Philippines</div>
 </footer>
 
@@ -2011,6 +2049,8 @@ document.querySelectorAll('a,button,.portfolio-card,.about-value,.skill-category
 });
 // nav scroll
 window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60));
+// keep footer year current automatically
+(function(){var y=document.getElementById('footer-year');if(y)y.textContent=new Date().getFullYear();})();
 // ── SIGNATURE ANIMATION SYSTEM: Soft Reveal + Precision Motion ──
 (function(){
   var sel = [
@@ -2199,6 +2239,69 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
 
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape') closeMenu();
+  });
+})();
+</script>
+
+<script>
+// ── CONTACT FORM (Web3Forms) ──
+(function(){
+  var form = document.getElementById('contactForm');
+  if(!form) return;
+  var status = document.getElementById('cf-status');
+  var btn = form.querySelector('button[type="submit"]');
+  var key = form.querySelector('input[name="access_key"]').value;
+
+  function setStatus(msg, ok){
+    status.textContent = msg;
+    status.style.display = 'block';
+    status.style.color = ok ? '#4A7A6D' : '#b4452f';
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    if(!form.checkValidity()){
+      setStatus('Please fill in all fields with a valid email.', false);
+      form.reportValidity();
+      return;
+    }
+    // guard against shipping without a real access key
+    if(!key || key === 'YOUR_WEB3FORMS_ACCESS_KEY'){
+      setStatus('Form not configured yet — add your Web3Forms access key to enable sending.', false);
+      return;
+    }
+
+    var original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    setStatus('', true);
+    status.style.display = 'none';
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if(data.success){
+        form.reset();
+        btn.textContent = 'Message Sent ✓';
+        btn.style.background = '#4A7A6D';
+        btn.style.borderColor = '#4A7A6D';
+        setStatus("Thanks! Your message is on its way — I'll get back to you soon.", true);
+      } else {
+        btn.disabled = false;
+        btn.textContent = original;
+        setStatus(data.message || 'Something went wrong. Please email me directly instead.', false);
+      }
+    })
+    .catch(function(){
+      btn.disabled = false;
+      btn.textContent = original;
+      setStatus('Network error. Please email me directly at Janicewilla.badua@gmail.com.', false);
+    });
   });
 })();
 </script>
