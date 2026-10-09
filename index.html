@@ -18,8 +18,10 @@
 <meta property="og:title" content="Janice Willa Francisco — Web Designer &amp; Developer">
 <meta property="og:description" content="Clean, strategic, conversion-focused websites built from scratch. Freelance web designer & developer based in the Philippines.">
 <meta property="og:url" content="https://janicewillabadua.xyz/">
-<!-- TODO: host a 1200x630 preview image and point og:image to its full URL for rich link previews -->
 <meta property="og:image" content="https://janicewillabadua.xyz/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Janice Willa Francisco, web designer and developer">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -2561,6 +2563,55 @@ footer ::selection{background:rgba(185,207,224,0.35);color:#fff}
 .mc-arch{--fh:min(62svh,640px);left:60%}
 @media (max-width:1180px){.mc-figure,.mc-arch{left:70%}}
 @media (max-width:860px){.mc-first{left:5%;top:116px;font-size:clamp(5rem,26vw,10rem)}.mc-figure{left:auto;height:auto;margin-top:clamp(100px,28vw,150px)}}
+
+/* ==== HERO NAME: Instrument Serif ==== */
+.mc-first,.mc-rest{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-synthesis:none;font-kerning:normal}
+.mc-first{font-size:clamp(7rem,18vw,18.5rem);line-height:.82;letter-spacing:-0.035em;margin-left:-0.045em}
+.mc-rest{font-size:clamp(3.2rem,5.2vw,5.4rem);line-height:.95;letter-spacing:-0.02em;margin-bottom:1.1rem;margin-left:-0.05em}
+.mc-rest em{font-weight:400}
+.mc-l{padding:.04em .02em .22em 0;margin:-.04em -.02em -.22em 0}
+@media (max-width:860px){
+  .mc-first{font-size:clamp(5.6rem,30vw,11rem)}
+  .mc-rest{font-size:clamp(2.8rem,13vw,4rem)}
+}
+
+/* ==== HERO: value headline + name ==== */
+.mc-copy{top:50%;bottom:auto;transform:translateY(-46%);width:min(44vw,580px)}
+.mc-who{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem;margin-bottom:1.4rem;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.mc-who b{font-weight:600;color:var(--text)}
+.mc-who span::before{content:'';display:inline-block;width:22px;height:1px;margin-right:.8rem;vertical-align:middle;background:var(--accent2)}
+.mc-head{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(2.6rem,4.4vw,4.4rem);line-height:1.06;letter-spacing:-0.02em;color:var(--text);margin-bottom:1.5rem;text-wrap:balance}
+.mc-head .mc-l{display:block}
+@media (max-width:1180px){.mc-copy{width:min(50vw,480px)}}
+@media (max-width:860px){
+  .mc-copy{order:1;top:auto;transform:none;width:100%;margin-top:.4rem}
+  .mc-figure{order:2;margin-top:2rem}
+  .mc-head{font-size:clamp(2.3rem,10vw,3.2rem)}
+  .mc-btns{margin-bottom:.5rem}
+}
+
+/* ==== HERO: aligned grid (text | photo | details) ==== */
+@media (min-width:861px){
+  .mc{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(200px,230px);column-gap:clamp(2rem,4.5vw,4.5rem);align-content:center;align-items:start;height:100svh;min-height:620px;max-height:1000px;padding:110px 5% 56px}
+  .mc-arch{display:none}
+  .mc-copy{position:relative;left:auto;top:auto;bottom:auto;transform:none;width:auto;max-width:580px;grid-column:1;grid-row:1}
+  .mc-figure{position:relative;left:auto;bottom:auto;grid-column:2;grid-row:1;height:min(calc(100svh - 200px),640px);transform:translate3d(calc(var(--px) * 6px),calc(var(--py) * 4px),0);border-radius:999px 999px 10px 10px;outline:1px solid rgba(92,111,124,0.3);outline-offset:14px}
+  .mc-specs{position:relative;right:auto;bottom:auto;width:auto;grid-column:3;grid-row:1;align-self:end}
+}
+@media (min-width:861px) and (max-width:1180px){
+  .mc{grid-template-columns:minmax(0,1fr) auto;padding-top:136px}
+  .mc-specs{display:none}
+}
+
+/* ==== MOBILE POLISH: readable labels, comfortable tap targets ==== */
+@media (max-width:860px){
+  .btn-primary,.btn-secondary{font-size:.78rem;min-height:48px;display:inline-flex;align-items:center;justify-content:center}
+  .marquee-item{font-size:.72rem}
+  .cap-system-label,.cap-system-status,.exp-badge{font-size:.7rem}
+  .nav-hamburger{width:44px;height:44px;padding:10px}
+  .nav-logo{padding:8px 0}
+  .contact-info-val a{display:inline-block;padding:10px 0;margin:-10px 0}
+}
 </style>
 </head>
 <body>
@@ -2619,16 +2670,12 @@ footer ::selection{background:rgba(185,207,224,0.35);color:#fff}
 <!-- ══ HERO: magazine cover ══ -->
 <section class="mc" id="home">
   <div class="mc-arch" aria-hidden="true"></div>
-  <h1 class="mc-name">
-    <span class="mc-first" id="mcFirst" aria-hidden="true"><span class="mc-l"><span>J</span></span><span class="mc-l"><span>a</span></span><span class="mc-l"><span>n</span></span><span class="mc-l"><span>i</span></span><span class="mc-l"><span>c</span></span><span class="mc-l"><span>e</span></span></span>
-    <span class="mc-sr">Janice Willa Francisco</span>
-  </h1>
   <div class="mc-figure" id="mcFigure">
     <img src="assets/janice-hero.webp" alt="Janice Willa Francisco, web designer and developer" width="1080" height="1446" fetchpriority="high">
   </div>
   <div class="mc-copy">
-    <p class="mc-rest" aria-hidden="true"><em><span class="mc-l"><span>W</span></span><span class="mc-l"><span>i</span></span><span class="mc-l"><span>l</span></span><span class="mc-l"><span>l</span></span><span class="mc-l"><span>a</span></span></em> <span class="mc-l"><span>F</span></span><span class="mc-l"><span>r</span></span><span class="mc-l"><span>a</span></span><span class="mc-l"><span>n</span></span><span class="mc-l"><span>c</span></span><span class="mc-l"><span>i</span></span><span class="mc-l"><span>s</span></span><span class="mc-l"><span>c</span></span><span class="mc-l"><span>o</span></span></p>
-    <p class="mc-role mc-in">Web Designer &amp; Developer</p>
+    <p class="mc-who mc-in"><b>Janice Willa Francisco</b><span>Web Designer &amp; Developer</span></p>
+    <h1 class="mc-head"><span class="mc-l"><span>Websites that build trust</span></span> <span class="mc-l"><span>and win clients.</span></span></h1>
     <p class="mc-desc mc-in">I design and build clean, strategic websites that help businesses establish credibility, attract the right clients, and scale their online presence — beautifully.</p>
     <div class="mc-btns mc-in">
       <a href="#portfolio" class="btn-primary">View Portfolio</a>
@@ -3503,7 +3550,7 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
   function stagger(){
     mc.querySelectorAll('#mcFirst .mc-l>span').forEach(function(el,i){ el.style.transitionDelay = (i*70)+'ms'; });
     var img = mc.querySelector('.mc-figure img'); img.style.transitionDelay = '220ms';
-    mc.querySelectorAll('.mc-rest .mc-l>span').forEach(function(el,i){ el.style.transitionDelay = (620 + i*45)+'ms'; });
+    mc.querySelectorAll('.mc-head .mc-l>span').forEach(function(el,i){ el.style.transitionDelay = (380 + i*120)+'ms'; });
     mc.querySelectorAll('.mc-in').forEach(function(el,i){ el.style.transitionDelay = (520 + i*90)+'ms'; });
   }
   function go(){ stagger(); requestAnimationFrame(function(){ mc.classList.add('mc-go'); mc.classList.remove('mc-pre'); }); }
