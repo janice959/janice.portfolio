@@ -1,0 +1,13 @@
+{
+  "name": "Janice Willa Francisco — Web Designer & Developer",
+  "short_name": "Janice",
+  "description": "Freelance web designer and AI-assisted developer in the Philippines.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#EFEFEA",
+  "theme_color": "#5C6F7C",
+  "icons": [
+    { "src": "assets/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
