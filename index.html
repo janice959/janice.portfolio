@@ -356,7 +356,7 @@ footer{padding:3rem 5%;border-top:1px solid var(--border);background:var(--bg3);
   background:#EFEFEA;
   display:flex;align-items:center;justify-content:center;
   flex-direction:column;overflow:hidden;
-  transition:opacity 1s cubic-bezier(0.76,0,0.24,1),visibility 1s;
+  transition:opacity .6s cubic-bezier(0.76,0,0.24,1),visibility .6s;
 }
 #preloader.hide{opacity:0;visibility:hidden;pointer-events:none}
 #preloader::before{
@@ -1705,7 +1705,7 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
   document.body.style.overflow = 'hidden';
 
   // fallback — if anything fails, show site after 5s
-  var fallback = setTimeout(function(){ showMain(); }, 5000);
+  var fallback = setTimeout(function(){ showMain(); }, 2500);
 
   // easing helper
   function ease(t){ return t<0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
@@ -1734,7 +1734,7 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
     cntVal = Math.min(cntVal + Math.floor(Math.random()*12)+4, 99);
     cnt.textContent = (cntVal < 10 ? '0' : '') + cntVal;
     if(cntVal >= 99){ clearInterval(cntTimer); cnt.textContent = '99'; }
-  }, 80);
+  }, 40);
 
   try {
     // sequence:
@@ -1745,30 +1745,30 @@ window.addEventListener('scroll',()=>document.getElementById('navbar').classList
     // 1050ms — subtitle fades
     // 2600ms — exit
 
-    revealWord(document.getElementById('pw1'), 0, 600);
-    revealWord(document.getElementById('pw2'), 380, 600);
-    revealWord(document.getElementById('pw3'), 720, 600, function(){
+    revealWord(document.getElementById('pw1'), 0, 480);
+    revealWord(document.getElementById('pw2'), 110, 480);
+    revealWord(document.getElementById('pw3'), 220, 480, function(){
       // bar
       setTimeout(function(){
         var bar = document.getElementById('pre-bar');
         bar.style.opacity = '1';
         bar.style.transform = 'scaleX(1)';
-      }, 160);
+      }, 60);
       // subtitle
       setTimeout(function(){
         var sub = document.getElementById('pre-sub');
         sub.style.opacity = '1';
         sub.style.transform = 'translateY(0)';
-      }, 320);
+      }, 120);
       // finish counter
-      setTimeout(function(){ clearInterval(cntTimer); cnt.textContent = '100'; }, 600);
+      setTimeout(function(){ clearInterval(cntTimer); cnt.textContent = '100'; }, 250);
       // exit
       setTimeout(function(){
         clearTimeout(fallback);
         cnt.style.opacity = '0';
         try { sessionStorage.setItem('pre_played','1'); } catch(e){}
         showMain();
-      }, 1600);
+      }, 420);
     });
   } catch(e){
     clearTimeout(fallback);
