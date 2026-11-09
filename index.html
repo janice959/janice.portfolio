@@ -1243,6 +1243,42 @@ footer ::selection{background:rgba(185,207,224,0.35);color:#fff}
   .reel-code{min-height:44px;padding:.7rem 0}
   .nav-logo,.footer-logo{min-height:44px;display:inline-flex;align-items:center}
 }
+
+/* ==== PROCESS & PRICING ==== */
+#process{position:relative;overflow:hidden;background:var(--bg)}
+.proc-intro{max-width:560px;margin-top:1.4rem;font-size:1.05rem;line-height:1.75;color:var(--text2)}
+.proc-intro b{color:var(--text);font-weight:600}
+.proc-steps{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;margin-top:3rem;counter-reset:none;position:relative}
+.proc-steps::before{content:'';position:absolute;left:0;right:0;top:22px;height:1px;background:linear-gradient(90deg,var(--accent),var(--accent2));opacity:.45}
+.proc-step{position:relative;padding-top:3.4rem}
+.proc-num{position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;font-size:.82rem;font-weight:600;letter-spacing:.04em;box-shadow:0 0 0 6px var(--bg)}
+.proc-day{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#8A7652;font-weight:600;margin-bottom:.45rem}
+.proc-step h3{font-family:'Playfair Display',serif;font-weight:500;font-size:1.3rem;line-height:1.2;color:var(--text);margin-bottom:.5rem}
+.proc-step p{font-size:.9rem;line-height:1.65;color:var(--text2)}
+.proc-note{margin-top:2rem;font-size:.85rem;line-height:1.6;color:#5f6468;max-width:760px}
+.proc-pricing{margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border2)}
+.proc-pricing-title{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.6rem,2.6vw,2.2rem);color:var(--text);margin-bottom:1.6rem}
+.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.price-card{padding:1.8rem 1.7rem;border-radius:12px;background:#FBFBF9;border:1px solid var(--border2);box-shadow:0 18px 36px -26px rgba(26,26,26,.35)}
+.price-card h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:1rem}
+.price-amt{font-family:'Playfair Display',serif;font-size:2.3rem;line-height:1;color:var(--text);margin-bottom:.9rem}
+.price-amt span{font-family:'Inter',sans-serif;font-size:.8rem;color:#5f6468;vertical-align:middle;margin-right:.2rem}
+.price-amt small{font-family:'Inter',sans-serif;font-size:1rem;color:#5f6468}
+.price-quote{font-size:1.9rem}
+.price-desc{font-size:.92rem;line-height:1.6;color:var(--text2)}
+.price-card-custom{background:#EAE7DF}
+.proc-cta{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-top:1.8rem}
+.proc-cta p{font-size:.9rem;color:var(--text2);max-width:520px}
+@media (max-width:980px){
+  .proc-steps{grid-template-columns:1fr;gap:0;margin-top:2.4rem}
+  .proc-steps::before{left:21px;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,var(--accent),var(--accent2))}
+  .proc-step{padding:0 0 2rem 4.2rem}
+  .proc-step:last-child{padding-bottom:0}
+  .price-grid{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .proc-cta .btn-primary{width:100%}
+}
 </style>
 </head>
 <body>
@@ -1407,6 +1443,36 @@ footer ::selection{background:rgba(185,207,224,0.35);color:#fff}
     </div>
   </div>
 </section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="section-inner">
+    <div class="section-label fade-up">Process</div>
+    <h2 class="section-title fade-up fade-up-d1">How We'll Work <span class="italic">Together</span></h2>
+    <div class="sr-underline fade-up fade-up-d2"></div>
+    <p class="proc-intro fade-up fade-up-d2">A clear, fast path from first call to launch. Most business websites go live <b>within 7 days</b>.</p>
+
+    <ol class="proc-steps">
+      <li class="proc-step sr"><span class="proc-num">01</span><span class="proc-day">Day 1</span><h3>Discovery & scope</h3><p>A quick call about your business, goals and pages. You get a clear written scope and quote before any work starts.</p></li>
+      <li class="proc-step sr"><span class="proc-num">02</span><span class="proc-day">Day 2</span><h3>Design direction</h3><p>I map out the layout and visual style, including colours, fonts and structure, for your approval.</p></li>
+      <li class="proc-step sr"><span class="proc-num">03</span><span class="proc-day">Days 3–5</span><h3>Build</h3><p>Your site is built mobile-first with SEO basics, a working contact form and fast loading. You get a live preview link.</p></li>
+      <li class="proc-step sr"><span class="proc-num">04</span><span class="proc-day">Day 6</span><h3>Review & refine</h3><p>You review the preview and share your feedback, and I refine the details until it feels right.</p></li>
+      <li class="proc-step sr"><span class="proc-num">05</span><span class="proc-day">Day 7</span><h3>Launch & handover</h3><p>Your site goes live on your domain, with a walkthrough so you know exactly how everything works.</p></li>
+    </ol>
+    <p class="proc-note fade-up">The 7-day timeline applies to standard business websites and landing pages once your content (logo, text and photos) is ready. E-commerce and larger projects are scoped separately.</p>
+
+    <div class="proc-pricing">
+      <h3 class="proc-pricing-title fade-up">Starting prices</h3>
+      <div class="price-grid">
+        <div class="price-card sr"><h4>Website Development</h4><p class="price-amt"><span>from</span> ₱8,500 <small>/ $150</small></p><p class="price-desc">A multi-page business website built for credibility and conversion.</p></div>
+        <div class="price-card sr"><h4>Landing Page</h4><p class="price-amt"><span>from</span> ₱4,500 <small>/ $80</small></p><p class="price-desc">A single page designed around one action, such as a booking or enquiry.</p></div>
+        <div class="price-card sr price-card-custom"><h4>E-commerce & Custom Builds</h4><p class="price-amt price-quote">Custom quote</p><p class="price-desc">Online shops and larger projects, scoped and priced to your needs.</p></div>
+      </div>
+      <div class="proc-cta fade-up"><p>Final pricing always follows a written scope, so the number you approve is the number you pay.</p><a href="#contact" class="btn-primary">Get a Quote</a></div>
+    </div>
+  </div>
+</section>
+
 
 <!-- SKILLS -->
 <section class="section skills-bg" id="skills">
