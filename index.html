@@ -1269,6 +1269,10 @@ footer ::selection{background:rgba(185,207,224,0.35);color:#fff}
 .price-quote{font-size:1.9rem}
 .price-desc{font-size:.92rem;line-height:1.6;color:var(--text2)}
 .price-card-custom{background:#EAE7DF}
+.price-card-hourly{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:1.5rem 3rem}
+.price-card-hourly .price-desc{max-width:52ch}
+.price-card-hourly .price-amt{margin-bottom:0;white-space:nowrap}
+@media (max-width:640px){.price-card-hourly{flex-direction:column;align-items:flex-start}}
 .proc-cta{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-top:1.8rem}
 .proc-cta p{font-size:.9rem;color:var(--text2);max-width:520px}
 @media (max-width:980px){
@@ -1465,11 +1469,12 @@ footer ::selection{background:rgba(185,207,224,0.35);color:#fff}
     <p class="proc-note fade-up">The 7-day timeline applies to standard business websites and landing pages once your content (logo, text and photos) is ready. E-commerce and larger projects are scoped separately.</p>
 
     <div class="proc-pricing">
-      <h3 class="proc-pricing-title fade-up">Starting prices</h3>
+      <h3 class="proc-pricing-title fade-up">Pricing</h3>
       <div class="price-grid">
         <div class="price-card sr"><h4>Website Development</h4><p class="price-amt"><span>from</span> ₱8,500 <small>/ $150</small></p><p class="price-desc">A multi-page business website built for credibility and conversion.</p></div>
         <div class="price-card sr"><h4>Landing Page</h4><p class="price-amt"><span>from</span> ₱4,500 <small>/ $80</small></p><p class="price-desc">A single page designed around one action, such as a booking or enquiry.</p></div>
         <div class="price-card sr price-card-custom"><h4>E-commerce & Custom Builds</h4><p class="price-amt price-quote">Custom quote</p><p class="price-desc">Online shops and larger projects, scoped and priced to your needs.</p></div>
+        <div class="price-card sr price-card-hourly"><div><h4>Hourly Support</h4><p class="price-desc">Website updates and edits, AI-assisted virtual assistance and admin work. The rate depends on the task.</p></div><p class="price-amt">$8–$15 <small>/ hour</small></p></div>
       </div>
       <div class="proc-cta fade-up"><p>Final pricing always follows a written scope, so the number you approve is the number you pay.</p><a href="#contact" class="btn-primary">Get a Quote</a></div>
     </div>
